@@ -1,11 +1,29 @@
 <app-default-login-layout
-    title="Faça seu login"
+    title=""
     primaryBtnText="Login"
     secondaryBtnText="Registrar"
 >
 
     <form [formGroup]="loginForm">
+        <app-primary-imput
+            formControlName="user"
+            inputName="user"
+            type="user"
+            label="Usuário:"
+            placeholder=""
+        >
+            <img src="/assets/svg/user.svg"/>
+        </app-primary-imput>
 
+        <app-primary-imput
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Senha:"
+            placeholder=""
+        >
+            <img src="/assets/svg/pass.svg"/>
+        </app-primary-imput>
     </form>
 
 </app-default-login-layout>
