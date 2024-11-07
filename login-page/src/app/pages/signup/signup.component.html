@@ -1,0 +1,52 @@
+<app-default-login-layout
+    title=""
+    primaryBtnText="Registrar"
+    secondaryBtnText="Login"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!signupForm.valid"
+>
+
+    <form [formGroup]="signupForm">
+        <app-primary-imput
+            formControlName="user"
+            inputName="user"
+            type="user"
+            label=""
+            placeholder="Usuário"
+        >
+            <img src="/assets/svg/user.svg"/>
+        </app-primary-imput>
+
+        <app-primary-imput
+            formControlName="email"
+            inputName="email"
+            type="text"
+            label=""
+            placeholder="Email"
+        >
+            <img src="/assets/svg/mail.svg"/>
+        </app-primary-imput>
+
+        <app-primary-imput
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label=""
+            placeholder="Digite sua senha"
+        >
+            <img src="/assets/svg/pass.svg"/>
+        </app-primary-imput>
+
+        <app-primary-imput
+        formControlName="passwordConfirm"
+        inputName="passwordConfirm"
+        type="password"
+        label=""
+        placeholder="Repita sua senha"
+    >
+        <img src="/assets/svg/pass.svg"/>
+    </app-primary-imput>
+    </form>
+
+</app-default-login-layout>
