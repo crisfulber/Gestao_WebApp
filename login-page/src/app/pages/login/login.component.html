@@ -2,6 +2,9 @@
     title=""
     primaryBtnText="Login"
     secondaryBtnText="Registrar"
+    (submit)="submit()"
+    (navigate)="navigate()"
+    [disablePrimaryBtn]="!loginForm.valid"
 >
 
     <form [formGroup]="loginForm">
